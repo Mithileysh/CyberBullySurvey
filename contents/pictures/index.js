@@ -1,4 +1,4 @@
-var districts = {
+var picture = {
 
     searchByZipcode: function(zipcode) {
 
@@ -11,7 +11,7 @@ var districts = {
 
     load: function() {
 
-        $.get("/CyberBullySurvey/pictures/ui.jade", function(template) {
+        $.get("pictures/ui.jade", function(template) {
             var html = jade.render(template)
             $("#pictures").html(html)
         })
