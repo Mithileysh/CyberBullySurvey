@@ -1,8 +1,11 @@
 h5 Survey
 .row
-    .col-md-8
+    .row
         .form-group.form-group-default
             label Legislator            
             input#legislators.form-control(type='text', required='')                
-    .col-md-4                         
-        button.btn.btn-primary(onClick='committee.searchByZipcode($("#legislators").val())') Search
+    .row
+        h5 Questions:
+        input#Q1.form-control(type="radio" name="survey" id="Q1" value="yes" Yes</td>
+        <td><input type="radio" name="survey" id="Q1" value="no" /> No</td>
+        button.btn.btn-primary.pull-right(onClick='committee.searchByZipcode($("#legislators").val())') next
