@@ -1,5 +1,5 @@
-$( "#legislators" ).on( "click", function( event ) {
-    legislators.load()
+$( "#instructions" ) {
+    instructions.load()
 })
 
 $( "#districts" ).on( "click", function( event ) {
