@@ -11,13 +11,10 @@ var districts = {
 
     load: function() {
 
-        $.get("/sunlight/instructions/instructions.jade", function(template) {
+        $.get("/CyberBullySurvey/pictures/ui.jade", function(template) {
             var html = jade.render(template)
-            $("#instructions").html(html)
+            $("#pictures").html(html)
         })
-
-        // default search results
-        districts.searchByZipcode()
 
     }
 
