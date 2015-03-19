@@ -3,8 +3,8 @@ var picture = {
     loadQuestions: function() {
 
 
-        $.get("data/cyberbullying_data.json.data", function(data) {
-            var result = JSON.parse(data)
+        $.get("data/cyberbullying_data2.json.data", function(data) {
+           var result = JSON.parse(data)
 
             //make data arrays so they can be more easily parsed by jade?
 
