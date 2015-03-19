@@ -1,14 +1,31 @@
 h3 Survey
-.row
 
 h3 Questions
-.row
-    h5 Question1:
-    <p> Is there any cyberaggressive behavior in the online posts?  <i>Mark yes if there is at least one negative word/comment and or content with intent to harm someone or others</i></p>
-    <td><input type="radio" name="survey" id="Q1" value="1" /> Yes</td>
-    <td><input type="radio" name="survey" id="Q1" value="0" /> No</td>
-    h5 Question2:
-    <p> Is there any cyberbullying in the online post?  <i>Mark yes if there are negative words and or comment with intent to harm someone or other, and the posts include two or more repeated negativity against a victim that cannot easily defend him or herself</i></p>
-    <td><input type="radio" name="survey" id="Q2" value="1" /> Yes</td>
-    <td><input type="radio" name="survey" id="Q2" value="0" /> No</td>
-    button.btn.btn-primary.pull-right(onClick='picture.nextQuestion$("#Q1,#Q2").val())') next
+
+h5 Question1:
+p Is there any cyberaggressive behavior in the online posts?  <i>Mark yes if there is at least one negative word/comment and or content with intent to harm someone or others</i>
+.col-mid-1
+    label Yes &nbsp
+    input#Element1(type="radio", name="Question1")       
+.col-mid-1
+    label No &nbsp
+    input#Element2(type="radio", name="Question1") 
+h5 Question2:
+<p> Is there any cyberbullying in the online post?  <i>Mark yes if there are negative words and or comment with intent to harm someone or other, and the posts include two or more repeated negativity against a victim that cannot easily defend him or herself</i></p>
+.col-mid-1
+    label Yes &nbsp
+    input#Element3(type="radio", name="Question2")       
+.col-mid-1
+    label No &nbsp
+    input#Element4(type="radio", name="Question2") 
+
+if Element1
+    if Element3
+        button.btn.btn-primary.pull-right(onClick='picture.nextQuestion($("1","1").val())') Submit
+    else
+        button.btn.btn-primary.pull-right(onClick='picture.nextQuestion($("0","0").val())') Submit
+else
+    if Element3
+        button.btn.btn-primary.pull-right(onClick='picture.nextQuestion($("0","1").val())') Submit
+    else
+        button.btn.btn-primary.pull-right(onClick='picture.nextQuestion($("1","1").val())') Submit
