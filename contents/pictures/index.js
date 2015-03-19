@@ -1,6 +1,6 @@
 var picture = {
 
-    load: function() {
+    loadQuestions: function() {
 
 
         $.get("data/cyberbullying_data.json.data", function(data) {
@@ -14,9 +14,12 @@ var picture = {
             })
 
         })
-             
-        
+    },
+    load: function() {
 
+        $.get("pictures/ui.jade", function(template) {
+            var html = jade.render(template)
+            $("#pictures").html(html)
+        })
     }
-
 }

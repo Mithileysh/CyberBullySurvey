@@ -1,11 +1,6 @@
-h5 Survey
-.row
-    .row
-        .form-group.form-group-default
-            label Legislator            
-            input#legislators.form-control(type='text', required='')                
-    .row
-        h5 Questions:
-        input#Q1.form-control(type="radio" name="survey" id="Q1" value="yes" Yes</td>
-        <td><input type="radio" name="survey" id="Q1" value="no" /> No</td>
-        button.btn.btn-primary.pull-right(onClick='committee.searchByZipcode($("#legislators").val())') next
+h3 Overview
+
+p.
+    The purpose of this research is to better understand cyberaggression and cyberbullying in online social networks.  Please help us by answering the questions for each image and its associated posts on Instagram.  Use the definitions to the left to answer the questions about the different types of content that is posted.
+
+button.btn.btn-primary.pull-right(onClick='picture.loadQuestions()') Continue
