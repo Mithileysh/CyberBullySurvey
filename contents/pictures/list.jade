@@ -1,42 +1,29 @@
 h3 Image/Comments
 
 each item in data
-    .col-md-6
-        img(src= item.image_url)
-    .col-md-3
+    img(src= item.image_url)
     each comment in item.comments
         p User ID: #{comment.user_id}
         p Comment: #{comment.comment}
+    h5 Question1:
+    p Is there any cyberaggressive behavior in the online posts?  <i>Mark yes if there is at least one negative word/comment and or content with intent to harm someone or others</i>
+    .col-mid-1
+        label Yes &nbsp
+        input#Element1(type="radio", name="Question1")       
+    .col-mid-1
+        label No &nbsp
+        input#Element2(type="radio", name="Question1") 
+    h5 Question2:
+    p Is there any cyberbullying in the online post?  <i>Mark yes if there are negative words and or comment with intent to harm someone or other, and the posts include two or more repeated negativity against a victim that cannot easily defend him or herself</i>
+    .col-mid-1
+        label Yes &nbsp
+        input#Element3(type="radio", name="Question2")       
+    .col-mid-1
+        label No &nbsp
+        input#Element4(type="radio", name="Question2") 
+
     // - for (var i = 1; i < 150; i++) {
     //   -var myUser = "user_id_" + i
     //    -if (item.myUser != "")
     //        //p #{item.user_id_i}
     // - }
-
-h5 Question1:
-p Is there any cyberaggressive behavior in the online posts?  <i>Mark yes if there is at least one negative word/comment and or content with intent to harm someone or others</i>
-.col-mid-1
-    label Yes &nbsp
-    input#Element1(type="radio", name="Question1")       
-.col-mid-1
-    label No &nbsp
-    input#Element2(type="radio", name="Question1") 
-h5 Question2:
-<p> Is there any cyberbullying in the online post?  <i>Mark yes if there are negative words and or comment with intent to harm someone or other, and the posts include two or more repeated negativity against a victim that cannot easily defend him or herself</i></p>
-.col-mid-1
-    label Yes &nbsp
-    input#Element3(type="radio", name="Question2")       
-.col-mid-1
-    label No &nbsp
-    input#Element4(type="radio", name="Question2") 
-
-if Element1
-    if Element3
-        button.btn.btn-primary.pull-right(onClick='picture.nextQuestion($("1","1").val())') Submit
-    else
-        button.btn.btn-primary.pull-right(onClick='picture.nextQuestion($("0","0").val())') Submit
-else
-    if Element3
-        button.btn.btn-primary.pull-right(onClick='picture.nextQuestion($("0","1").val())') Submit
-    else
-        button.btn.btn-primary.pull-right(onClick='picture.nextQuestion($("1","1").val())') Submit
