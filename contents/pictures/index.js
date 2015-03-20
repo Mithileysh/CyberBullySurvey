@@ -42,6 +42,7 @@ var picture = {
                     data: result.data[id]
                 })
                 $("#pictures").html(html)
+                scroll(0,0)
             })
 
         })
