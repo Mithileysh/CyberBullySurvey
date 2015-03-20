@@ -1,26 +1,27 @@
 h3 Image/Comments
 
-each item in data
-    img(src= item.image_url)
-    each comment in item.comments
-        p User ID: #{comment.user_id}
-        p Comment: #{comment.comment}
-    h5 Question1:
-    p Is there any cyberaggressive behavior in the online posts?  <i>Mark yes if there is at least one negative word/comment and or content with intent to harm someone or others</i>
-    .col-mid-1
-        label Yes &nbsp
-        input#Element1(type="radio", name="Question1")       
-    .col-mid-1
-        label No &nbsp
-        input#Element2(type="radio", name="Question1") 
-    h5 Question2:
-    p Is there any cyberbullying in the online post?  <i>Mark yes if there are negative words and or comment with intent to harm someone or other, and the posts include two or more repeated negativity against a victim that cannot easily defend him or herself</i>
-    .col-mid-1
-        label Yes &nbsp
-        input#Element3(type="radio", name="Question2")       
-    .col-mid-1
-        label No &nbsp
-        input#Element4(type="radio", name="Question2") 
+img(src= data.image_url)
+each comment in data.comments
+    p User ID: #{comment.user_id}
+    p Comment: #{comment.comment}
+h5 Question1:
+p Is there any cyberaggressive behavior in the online posts?  <i>Mark yes if there is at least one negative word/comment and or content with intent to harm someone or others</i>
+.col-mid-1
+    label Yes &nbsp
+    input#Element1(type="radio", name="Question1", value="true")       
+.col-mid-1
+    label No &nbsp
+    input#Element2(type="radio", name="Question1", value="false") 
+h5 Question2:
+p Is there any cyberbullying in the online post?  <i>Mark yes if there are negative words and or comment with intent to harm someone or other, and the posts include two or more repeated negativity against a victim that cannot easily defend him or herself</i>
+.col-mid-1
+    label Yes &nbsp
+    input#Element3(type="radio", name="Question2", value="true")       
+.col-mid-1
+    label No &nbsp
+    input#Element4(type="radio", name="Question2", value="false")
+
+button.btn.btn-primary.pull-right(href="#" onClick='picture.loadQuestions(true,' + data.id + ', "#Element1","#Element2","#Element3","#Element4")') Next
 
     // - for (var i = 1; i < 150; i++) {
     //   -var myUser = "user_id_" + i
