@@ -10,9 +10,11 @@ var picture = {
 
     saveData: function(q1,q2,id) {
         $.get('data/survey_results.json.data', function(data) {
+            var results = require('./data/survey_results.json.data')
+            var post = .find()
             var result_data = {}
             if (!(q1 == "undefined" || q2 == "undefined")) {
-                var post = _.find(data, {'id': id})
+                var post = _.find(results.survey_results, {'id': id})
 
                 if (post) {
                     result_data = {
@@ -28,12 +30,12 @@ var picture = {
                         '1' : q1,
                         '2' : q2
                     }]
-                    data.push(result_data)
+                    results.survey_results.push(result_data)
                 }
                 fs.writeFileSync('./data/survey_results.json.data', JSON.stringify(results, null, 4));
             }
-        })
-    },
+        }
+    }
 
     loadQuestions: function(next,id,e1,e2,e3,e3) {
         $("#pictures").html()
